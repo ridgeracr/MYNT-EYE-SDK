@@ -81,13 +81,13 @@ class RectifyProcessor : public Processor {
   cv::Mat rectifyrad(const cv::Mat& R);
 
   void stereoRectify(models::CameraPtr leftOdo,
-      models::CameraPtr rightOdo, const CvMat* K1, const CvMat* K2,
-      const CvMat* D1, const CvMat* D2, CvSize imageSize,
-      const CvMat* matR, const CvMat* matT,
-      CvMat* _R1, CvMat* _R2, CvMat* _P1, CvMat* _P2, double* T_mul_f,
-      double *cx1_min_cx2,
+      models::CameraPtr rightOdo, const cv::Mat* K1, const cv::Mat* K2,
+      const cv::Mat* D1, const cv::Mat* D2, cv::Size imageSize,
+      const cv::Mat* matR, const cv::Mat* matT,
+      cv::Mat* _R1, cv::Mat* _R2, cv::Mat* _P1, cv::Mat* _P2, double* T_mul_f,
+      double* cx1_min_cx2,
       int flags = cv::CALIB_ZERO_DISPARITY, double alpha = -1,
-      CvSize newImgSize = cvSize(0,0));
+      cv::Size newImgSize = cv::Size(0,0));
 
 // Eigen::Matrix4d loadT(const mynteye::Extrinsics& in);
 // subEigen
